@@ -25,17 +25,23 @@ MP_CC="C:\Program Files (x86)\Microchip\xc16\v1.41\bin\xc16-gcc.exe"
 # MP_CPPC is not defined
 # MP_BC is not defined
 <<<<<<< HEAD
+<<<<<<< HEAD
 MP_AS="C:\Program Files\Microchip\xc16\v1.50\bin\xc16-as.exe"
 MP_LD="C:\Program Files\Microchip\xc16\v1.50\bin\xc16-ld.exe"
 MP_AR="C:\Program Files\Microchip\xc16\v1.50\bin\xc16-ar.exe"
 DEP_GEN=${MP_JAVA_PATH}java -jar "C:/Program Files (x86)/Microchip/MPLABX/v5.30/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
 MP_CC_DIR="C:\Program Files\Microchip\xc16\v1.50\bin"
 =======
+=======
+>>>>>>> parent of a3aaf2b... ajout carte_moteur.X qui compile
 MP_AS="C:\Program Files (x86)\Microchip\xc16\v1.41\bin\xc16-as.exe"
 MP_LD="C:\Program Files (x86)\Microchip\xc16\v1.41\bin\xc16-ld.exe"
 MP_AR="C:\Program Files (x86)\Microchip\xc16\v1.41\bin\xc16-ar.exe"
 DEP_GEN=${MP_JAVA_PATH}java -jar "C:/Program Files (x86)/Microchip/MPLABX/v5.30/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
 MP_CC_DIR="C:\Program Files (x86)\Microchip\xc16\v1.41\bin"
+<<<<<<< HEAD
+>>>>>>> parent of a3aaf2b... ajout carte_moteur.X qui compile
+=======
 >>>>>>> parent of a3aaf2b... ajout carte_moteur.X qui compile
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined

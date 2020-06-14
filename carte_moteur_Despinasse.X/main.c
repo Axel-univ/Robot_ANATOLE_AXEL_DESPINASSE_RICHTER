@@ -27,7 +27,12 @@ int main(void) {
 
     while (1) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       
+=======
+        SendMessageDirect ( ( unsigned char ) " Bonjour " , 7 ) ;
+        Sleep( 10000 ) ;// équivalent à un delay, celui ci dur 1 seconde
+>>>>>>> parent of a3aaf2b... ajout carte_moteur.X qui compile
 =======
         SendMessageDirect ( ( unsigned char ) " Bonjour " , 7 ) ;
         Sleep( 10000 ) ;// équivalent à un delay, celui ci dur 1 seconde
