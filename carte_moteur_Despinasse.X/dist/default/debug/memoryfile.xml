@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
@@ -17,6 +18,26 @@
     </memory>
   </executable>
 </project>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/debug/carte_moteur_Despinasse.X.debug.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>49152</length>
+      <used>150</used>
+      <free>49002</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>524514</length>
+      <used>5817</used>
+      <free>518697</free>
+    </memory>
+  </executable>
+</project>
+>>>>>>> parent of a3aaf2b... ajout carte_moteur.X qui compile
 =======
 <?xml version="1.0" encoding="UTF-8"?>
 
