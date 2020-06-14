@@ -5,7 +5,7 @@
 #define BAUDRATE 115200
 #define BRGVAL ((FCY/BAUDRATE)/4)-1
 
-void InitUART(void) {
+void InitUART() {
 U1MODEbits.STSEL = 0; // 1-stop bit
 U1MODEbits.PDSEL = 0; // No Parity, 8-data bits
 U1MODEbits.ABAUD = 0; // Auto-Baud Disabled
@@ -24,6 +24,7 @@ IEC0bits.U1RXIE = 0; // Disable UART Rx interrupt
 U1MODEbits.UARTEN = 1; // Enable UART
 U1STAbits.UTXEN = 1; // Enable UART Tx
 }
+
 void SendMessageDirect (unsigned char message , int length )
 {
 unsigned char i =0;
