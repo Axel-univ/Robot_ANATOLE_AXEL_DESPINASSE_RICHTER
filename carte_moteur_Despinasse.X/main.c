@@ -26,8 +26,7 @@ int main(void) {
     
 
     while (1) {
-        SendMessageDirect ( ( unsigned char ) " Bonjour " , 7 ) ;
-        Sleep( 10000 ) ;// équivalent à un delay, celui ci dur 1 seconde
+      
         if (ADCIsConversionFinished() == 1) {
             ADCClearConversionFinishedFlag();
 
