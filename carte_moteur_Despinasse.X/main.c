@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <XC.h>
 #include "ChipConfig.h"
 #include "IO.h"
 #include "xc.h"
@@ -16,47 +15,19 @@ unsigned int* result;
 
 int main(void) {
 
-      InitOscillator();
+    InitOscillator();
     InitIO();
     InitTimer1();
     InitADC1();
     InitTimer23();
     InitTimer4();
     InitPWM();
-    //InitUART();
+    InitUART();
     
 
-    while (1) 
-    {
-        //là si tu veux cast, tu le fait en ( unsigned char* ) pas ( unsigned char ), c'est un tableau de char le cast est pas nécessaire d'ailleurs je pense
-      //SendMessageDirect ((unsigned char*)"Bonjour" , 7 ) ; 
-         
-        //j'ai remplacé par un __delay32 40 000 000 pour un delay de 1 sec (on saute 40Mips) c'est bloquant alors juste pour le test
-        //__delay32(40000000); // équivalent à un delay, celui ci dure 1 seconde
-        
-    }
-}
-
-/*
-Le 03/03/2020
-Il manquait 1 résistance qui empechait le capteur droit extrême de fonctionner
-et une résistance qui entrainait une confusion entre le capteur centrale et le capteur extrême gauche 
-Le 04/03/2020
-Nous avons essayé de mettre le OperatingSystemLoop dans le timer 1 car nous pensions que 
-c'était le timer 4 qui ne fonctionnait pas cependant le robot ne roulait toujours pas donc le problème ne vient pas du timer
- Le 05/03/2020
- -On avait fais une erreur dans le PWM.c, on avait mis robotState.vitesseGaucheCommandeCourante = vitesseEnPourcents 
- au lieu de robotState.vitesseGaucheConsigne = vitesseEnPourcents.
- - Nous avons rajouté le jack en le définissant dans le main.h et comme nous l'a expliqué le prof si le jack est "appuyé" le micro reçoit 1 donc les 3.3v
- et si le jack est relaché le micro est relié à la masse avec la resistance de 10k et reçoit donc 0.
- ADC Gauche ne fonctionne plus il doit être cassé
- 
- */
-
-/*
- * 
- * ************************************************MACHINE A ETAT COMMENTEE******************************
- if (ADCIsConversionFinished() == 1) {
+    while (1) {
+      
+        if (ADCIsConversionFinished() == 1) {
             ADCClearConversionFinishedFlag();
 
             result = ADCGetResult();
@@ -98,4 +69,20 @@ c'était le timer 4 qui ne fonctionnait pas cependant le robot ne roulait toujour
             LED_ORANGE = 0;
         }
     }
+}
+
+/*
+Le 03/03/2020
+Il manquait 1 résistance qui empechait le capteur droit extrême de fonctionner
+et une résistance qui entrainait une confusion entre le capteur centrale et le capteur extrême gauche 
+Le 04/03/2020
+Nous avons essayé de mettre le OperatingSystemLoop dans le timer 1 car nous pensions que 
+c'était le timer 4 qui ne fonctionnait pas cependant le robot ne roulait toujours pas donc le problème ne vient pas du timer
+ Le 05/03/2020
+ -On avait fais une erreur dans le PWM.c, on avait mis robotState.vitesseGaucheCommandeCourante = vitesseEnPourcents 
+ au lieu de robotState.vitesseGaucheConsigne = vitesseEnPourcents.
+ - Nous avons rajouté le jack en le définissant dans le main.h et comme nous l'a expliqué le prof si le jack est "appuyé" le micro reçoit 1 donc les 3.3v
+ et si le jack est relaché le micro est relié à la masse avec la resistance de 10k et reçoit donc 0.
+ ADC Gauche ne fonctionne plus il doit être cassé
+ 
  */
